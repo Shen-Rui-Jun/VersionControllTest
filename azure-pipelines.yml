@@ -38,8 +38,8 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-- powershell: Write-Host "##vso[build.updatebuildnumber]$(NBGV_GitCommitId)"
-  displayName: 'Update build number to $(NBGV_GitCommitId)'
+- powershell: Write-Host "##vso[build.updatebuildnumber]$(NBGV_Version)"
+  displayName: 'Update build number to $(NBGV_Version)'
 
 - task: VSTest@2
   inputs:
