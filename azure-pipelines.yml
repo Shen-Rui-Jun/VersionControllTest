@@ -38,7 +38,7 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-- powershell: Write-Host "##vso[build.updatebuildnumber]$(GitBuildVersion)"
+- powershell: Write-Host "##vso[build.updatebuildnumber]${GitBuildVersionSimple}_$(GitBuildVersion)_${GitAssemblyInformationalVersion}_"
   displayName: 'Update build number to $(GitBuildVersion)'
 
 - task: VSTest@2
