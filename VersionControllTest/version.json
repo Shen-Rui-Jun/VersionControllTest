@@ -19,10 +19,10 @@
     "firstUnstableTag": "alpha"
   },
   "cloudBuild": {
+    "setVersionVariables": true,
+    "setAllVariables": true,
     "buildNumber": {
-      "enabled": true,
-      "setVersionVariables": true,
-      "setAllVariables": true
+      "enabled": true
     }
   }
 }
