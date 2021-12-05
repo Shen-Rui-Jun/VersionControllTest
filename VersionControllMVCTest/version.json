@@ -2,11 +2,10 @@
   "$schema": "https://raw.githubusercontent.com/dotnet/Nerdbank.GitVersioning/master/src/NerdBank.GitVersioning/version.schema.json",
   "version": "3.0-beta",
   "assemblyVersion": {
-    "version": "1.0", // optional. Use when x.y for AssemblyVersionAttribute differs from the default version property.
     "precision": "revision" // optional. Use when you want a more precise assembly version than the default major.minor.
   },
   "pathFilters": [ "." ],
-  "versionHeightOffset": 5000, // optional. Use when you need to add/subtract a fixed value from the computed version height.
+  "versionHeightOffset": 100, // optional. Use when you need to add/subtract a fixed value from the computed version height.
   "gitCommitIdShortFixedLength": 6, // optional. Set the commit ID abbreviation length.
   "gitCommitIdShortAutoMinimum": 0, // optional. Set to use the short commit ID abbreviation provided by the git repository.
   "publicReleaseRefSpec": [
@@ -20,9 +19,7 @@
   },
   "cloudBuild": {
     "buildNumber": {
-      "enabled": true,
-      "setVersionVariables": true,
-      "setAllVariables": true
+      "setVersionVariables": false,
     }
   }
 }
