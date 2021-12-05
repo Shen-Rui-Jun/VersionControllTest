@@ -2,7 +2,6 @@
   "$schema": "https://raw.githubusercontent.com/dotnet/Nerdbank.GitVersioning/master/src/NerdBank.GitVersioning/version.schema.json",
   "version": "3.0-beta",
   "assemblyVersion": {
-    "version": "1.0", // optional. Use when x.y for AssemblyVersionAttribute differs from the default version property.
     "precision": "revision" // optional. Use when you want a more precise assembly version than the default major.minor.
   },
   "versionHeightOffset": 5000, // optional. Use when you need to add/subtract a fixed value from the computed version height.
