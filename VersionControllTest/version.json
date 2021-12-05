@@ -1,28 +1,27 @@
 {
   "$schema": "https://raw.githubusercontent.com/dotnet/Nerdbank.GitVersioning/master/src/NerdBank.GitVersioning/version.schema.json",
-  "version": "3.0-beta",
+  "version": "3.0-TestTag",
   "assemblyVersion": {
-    "version": "1.0", // optional. Use when x.y for AssemblyVersionAttribute differs from the default version property.
-    "precision": "revision" // optional. Use when you want a more precise assembly version than the default major.minor.
+    "version": "1.0",
+    "precision": "revision"
   },
-  "pathFilters": [ "." ],
-  "versionHeightOffset": 5000, // optional. Use when you need to add/subtract a fixed value from the computed version height.
-  "gitCommitIdShortFixedLength": 6, // optional. Set the commit ID abbreviation length.
-  "gitCommitIdShortAutoMinimum": 0, // optional. Set to use the short commit ID abbreviation provided by the git repository.
+  "versionHeightOffset": 5000,
+  "gitCommitIdShortFixedLength": 6,
+  "gitCommitIdShortAutoMinimum": 0,
   "publicReleaseRefSpec": [
-    "^refs/heads/master$", // we release out of master
-    "^refs/tags/v\\d+\\.\\d+$" // we also release tags starting with vN.N
+    "^refs/heads/master$",
+    "^refs/tags/v\\d+\\.\\d+$"
   ],
-  "release": {
-    "branchName": "release/v{version}",
-    "versionIncrement": "minor",
-    "firstUnstableTag": "alpha"
-  },
   "cloudBuild": {
-    "setVersionVariables": true,
     "setAllVariables": true,
     "buildNumber": {
       "enabled": true
     }
-  }
+  },
+  "release": {
+    "branchName": "release/v{version}"
+  },
+  "pathFilters": [
+    "./"
+  ]
 }
