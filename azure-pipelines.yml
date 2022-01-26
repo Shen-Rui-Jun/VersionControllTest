@@ -39,7 +39,7 @@ steps:
     configuration: '$(buildConfiguration)'
 
 - powershell: Write-Host "##vso[build.updatebuildnumber]$(NBGV_Version)"
-  displayName: 'Update build number to $(NBGV_Version)'
+  displayName: 'Update build number to $(NBGV_GitCommitDate)'
 
 - task: VSTest@2
   inputs:
